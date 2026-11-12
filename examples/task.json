@@ -1,0 +1,22 @@
+{
+  "stage": "CONCEPT",
+  "goal": "设计两种不同的原创奇幻开篇，选出值得展开的一种。",
+  "reader_desire": "失去资格的人，靠独有本事重新取得选择权。",
+  "constraints": [
+    "不用现有作品的角色、能力或事件序列",
+    "本次只交构思，不生成正文或发布"
+  ],
+  "inputs": {
+    "previous_prose": "",
+    "approved_canon": [],
+    "reference_material": []
+  },
+  "budget": {
+    "max_revision_rounds": 1
+  },
+  "deliverables": [
+    "两个实质不同构思",
+    "基于具体体验的选择理由",
+    "下一阶段所缺全局资产"
+  ]
+}

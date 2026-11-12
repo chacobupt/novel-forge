@@ -1,0 +1,362 @@
+[
+  {
+    "group": "开书与全局资产",
+    "id": "01",
+    "title": "新书任务与授权",
+    "status": "需补齐",
+    "input": "用户目标、单一参照、题材与读者假设",
+    "action": "总控确定完成条件、候选权限、调用预算、未知项；不继承旧书授权",
+    "outputs": "book.json；授权与决策记录.json",
+    "failure": "缺关键偏好可先列明确假设，未定不得伪称批准"
+  },
+  {
+    "group": "开书与全局资产",
+    "id": "02",
+    "title": "原文登记与索引",
+    "status": "需补齐",
+    "input": "自选参照作品原始文件",
+    "action": "保留原字节、编码、SHA、章节与行号；识别重复标题与下载杂质",
+    "outputs": "source_registry.json；chapter_index.json",
+    "failure": "定位失败回原始文件，不能悄改源SHA"
+  },
+  {
+    "group": "开书与全局资产",
+    "id": "03",
+    "title": "单书分层研究",
+    "status": "需补齐",
+    "input": "原文、当前创作问题",
+    "action": "观察欲望/体验/机制/事件/关系/场面/实体/表达；全书索引与局部窗口分开",
+    "outputs": "reference_catalog.json；全书参照结构.md；机制样例.json",
+    "failure": "未读范围标UNKNOWN；完整因果对象不足补读"
+  },
+  {
+    "group": "开书与全局资产",
+    "id": "04",
+    "title": "创意竞争与定位",
+    "status": "需补齐",
+    "input": "读者假设、参照机制",
+    "action": "形成两个实质不同的新书方向，比较可持续欲望、独特机会、开篇兑现及长线空间",
+    "outputs": "创意候选.json；选题决策.json",
+    "failure": "都不成立返回创意，不选最像原书者"
+  },
+  {
+    "group": "开书与全局资产",
+    "id": "05",
+    "title": "书籍罗盘",
+    "status": "需补齐",
+    "input": "选中创意",
+    "action": "定核心幻想、主角欲望、叙述距离、口味、不可牺牲体验、长度参考与结局方向",
+    "outputs": "书籍罗盘.md",
+    "failure": "方向未定不冻结细章"
+  },
+  {
+    "group": "开书与全局资产",
+    "id": "06",
+    "title": "全书主线与分卷",
+    "status": "需补齐",
+    "input": "书籍罗盘、参照结构",
+    "action": "设计起点到终局，分卷持久变化、阶段回报、长线悬念及后卷接口",
+    "outputs": "全书故事.md；分卷路线.json",
+    "failure": "因果/持续欲望不足返回05"
+  },
+  {
+    "group": "开书与全局资产",
+    "id": "07",
+    "title": "世界与力量",
+    "status": "需补齐",
+    "input": "全书故事的真实需求",
+    "action": "只建立影响选择的地理、制度、资源、能力资格、限制与成长路径",
+    "outputs": "世界规则.md；力量规则.json",
+    "failure": "不能照搬原书专名/能力与解法"
+  },
+  {
+    "group": "开书与全局资产",
+    "id": "08",
+    "title": "人物与关系",
+    "status": "需补齐",
+    "input": "主角和对手目标、世界条件",
+    "action": "并行设计人物欲望、有效反制、关系债、身份外形与声音，交总控合并",
+    "outputs": "角色库.json；关系图谱.json",
+    "failure": "有独立追求，声音卡不创造既定历史"
+  },
+  {
+    "group": "开书与全局资产",
+    "id": "09",
+    "title": "全局状态与悬念",
+    "status": "需补齐",
+    "input": "全书、人物、世界",
+    "action": "分开作者真相/人物已知/读者已见；记录承诺、伏笔、误读、揭示、兑现与再使用",
+    "outputs": "Canon.json；时间线.json；reader_state.json；伏笔与承诺.json",
+    "failure": "计划与正文事实分区；初始事实须有采用依据"
+  },
+  {
+    "group": "开书与全局资产",
+    "id": "10",
+    "title": "全局一致性与基线",
+    "status": "需补齐",
+    "input": "05—09资产",
+    "action": "核因果、能力、时空、资源与长线回报；总控修正后冻结同一版本",
+    "outputs": "全局资产清单.json；全局评审.json；决策记录.json",
+    "failure": "缺重要前提回对应资产，不用下游补救"
+  },
+  {
+    "group": "卷与单元设计",
+    "id": "11",
+    "title": "卷任务与参照绑定",
+    "status": "现有方法，需新书适配",
+    "input": "全书本卷段落、后卷接口、全局切片",
+    "action": "卷级spec明确主线变化、边界及完整参照段，核SHA",
+    "outputs": "volume_spec.json；planning_delivery.json",
+    "failure": "源不符停止，不能以摘要冒充原文"
+  },
+  {
+    "group": "卷与单元设计",
+    "id": "12",
+    "title": "卷方向与连续故事",
+    "status": "现有方法，需新书适配",
+    "input": "本卷任务",
+    "action": "新卷少量不同方向；展开完整故事，再设计角色长线与世界亲历",
+    "outputs": "卷纲.md（十部分）",
+    "failure": "已有方向局部扩容不强制重新三案"
+  },
+  {
+    "group": "卷与单元设计",
+    "id": "13",
+    "title": "多线编织与容量",
+    "status": "现有方法，需新书适配",
+    "input": "完整卷故事",
+    "action": "按条件传递/关系回流组织单元；先删合，后代表试排、容量估计",
+    "outputs": "单元设计注册表.json；容量取舍.json",
+    "failure": "故事不足回12或调边界，禁止Writer补水"
+  },
+  {
+    "group": "卷与单元设计",
+    "id": "14",
+    "title": "卷双评与采用",
+    "status": "现有方法，需新书适配",
+    "input": "完整卷纲及全局规则",
+    "action": "故事评审独立看体验；事实评审核后卷接口；有限返修后登记采用版本",
+    "outputs": "卷评审.json；卷纲采用记录.json",
+    "failure": "采用权限按新书授权，不自动沿用旧书批准"
+  },
+  {
+    "group": "单元生产准备",
+    "id": "15",
+    "title": "单元任务绑定",
+    "status": "现有实现，需换源",
+    "input": "卷纲、实际前章、全局切片、参照目录",
+    "action": "绑定unit_spec、calibration_suite、角色库、章号起点、任务ID及边界",
+    "outputs": "unit_spec.json；STATE.json；源校验记录",
+    "failure": "新书首章前情为空并显式标记，不读旧书结尾"
+  },
+  {
+    "group": "单元生产准备",
+    "id": "16",
+    "title": "运行预检与锁",
+    "status": "现有实现",
+    "input": "15及执行器配置",
+    "action": "检查源哈希/代码指纹/运行锁/累计预算；恢复时核父任务",
+    "outputs": "STATE.json；任务预算账",
+    "failure": "锁或结果未知先对账；不盲删锁不重置预算"
+  },
+  {
+    "group": "单元生产准备",
+    "id": "17",
+    "title": "取材与输入分离",
+    "status": "现有实现",
+    "input": "目标缺口、参考查询",
+    "action": "按需一主一辅完整窗口、适配与缓存；规划方法和表达窗口分离",
+    "outputs": "reference_packet.json；planning_delivery.json；context.json",
+    "failure": "无适配明确缺口；必需参考缺失停止"
+  },
+  {
+    "group": "单元生产准备",
+    "id": "18",
+    "title": "评估器基础校准",
+    "status": "现有实现",
+    "input": "独立短故事及表达样例",
+    "action": "开发/验证、正反顺序理解测试；表达关系校准",
+    "outputs": "校准调用回执；expression_calibration.json",
+    "failure": "失败不得自动采用；通过不证明审美"
+  },
+  {
+    "group": "单元生成",
+    "id": "19",
+    "title": "两个故事构思",
+    "status": "现有实现",
+    "input": "约束、前情、参照",
+    "action": "CONCEPT生成实质不同故事及appeal四项",
+    "outputs": "concepts.json",
+    "failure": "伪双案退回；不以章节数量证明容量"
+  },
+  {
+    "group": "单元生成",
+    "id": "20",
+    "title": "冷选与参照复核",
+    "status": "现有实现，需修正",
+    "input": "匿名A/B；第二轮增加参照",
+    "action": "SELECT先冷读再对照期待/优势/回报；当前代码要求两轮同胜者",
+    "outputs": "selection.json；两轮回执",
+    "failure": "修正方案允许新证据改变选择，详见A07"
+  },
+  {
+    "group": "单元生成",
+    "id": "21",
+    "title": "完整故事展开",
+    "status": "现有实现",
+    "input": "选中构思与边界",
+    "action": "DEVELOP写完整因果和人物经历，新增设定仅列候选身份",
+    "outputs": "story_v*.json；selected_story.json；01_核心故事设计.md",
+    "failure": "不是场面动作表；版本保留"
+  },
+  {
+    "group": "单元生成",
+    "id": "22",
+    "title": "故事冷读与事实审查",
+    "status": "现有实现",
+    "input": "完整故事；事实另见材料",
+    "action": "分别核体验/因果与事实；设计最多一次返修；必要时设计表达修复/重构",
+    "outputs": "reviews/story_*.json；设计修复回执",
+    "failure": "问题回21；证据不足与预算耗尽停止"
+  },
+  {
+    "group": "单元生成",
+    "id": "23",
+    "title": "详略、分章与角色卡",
+    "status": "现有实现",
+    "input": "完整故事、表达窗口",
+    "action": "ALLOCATE定主戏/停留/略过、章界、工作标题、人物分类、缺卡与机制适配",
+    "outputs": "allocation.json；character_voice_coverage.json",
+    "failure": "容量不成立回故事；旧minimum冲突按A05修"
+  },
+  {
+    "group": "逐章正文闭环",
+    "id": "24",
+    "title": "正文包与连续写作",
+    "status": "现有实现",
+    "input": "实际前章、分支状态、章故事、声音/形象、窗口",
+    "action": "WRITER写标题正文；后章必须等待实际采用前章",
+    "outputs": "calls/章_draft/input.txt；output.txt；chapters/章/v0.txt",
+    "failure": "创作子角色不见评分与修订宣言"
+  },
+  {
+    "group": "逐章正文闭环",
+    "id": "25",
+    "title": "正文冷读与事实审查",
+    "status": "现有实现",
+    "input": "实际正文及必要前情；事实另见约束",
+    "action": "读者EXPLICIT/INFERRED/UNKNOWN、体验/语言/连续性；事实提取状态",
+    "outputs": "reviews/章_reader*.json；章_facts*.json",
+    "failure": "引文核验不等于评审正确"
+  },
+  {
+    "group": "逐章正文闭环",
+    "id": "26",
+    "title": "证据修复与分层返修",
+    "status": "现有实现",
+    "input": "最新正文与有据问题",
+    "action": "纯引文错误EVIDENCE_REPAIR；表达PATCH/REPAIR；场景REPAIR；构思RECONSTRUCT",
+    "outputs": "各版正文；patch回执；修后评审；吸引力保留判断",
+    "failure": "修完复核最新稿；默认章一次、设计一次，不能刷循环"
+  },
+  {
+    "group": "逐章正文闭环",
+    "id": "27",
+    "title": "内部采用与分支记忆",
+    "status": "现有实现",
+    "input": "通过审查的正文",
+    "action": "以正文证据登记状态、力量/物件/关系与已知；只写候选分支",
+    "outputs": "chapters/章/decision_v*.json；branch_memory.json",
+    "failure": "不把后续计划、传闻或作者真相升级为事实"
+  },
+  {
+    "group": "逐章正文闭环",
+    "id": "28",
+    "title": "每组表达复核",
+    "status": "现有实现",
+    "input": "最多4章、16000有效字符与邻接",
+    "action": "EXPRESSION；必要时独立确认；有界PATCH；修后读/事实；覆盖账修复最多一次",
+    "outputs": "分组reading.txt/scope.json；sentence_ledger；confirmation/resolution",
+    "failure": "最多修2组、表达额外16调用；具体影响决定修复"
+  },
+  {
+    "group": "逐章正文闭环",
+    "id": "29",
+    "title": "审读断点与续章",
+    "status": "现有实现",
+    "input": "已采用且完成组审的前缀",
+    "action": "冻结正文/评审/记忆哈希；相同输入和代码精确复用，接下一章",
+    "outputs": "WRITING_CHECKPOINT.json；calls/*/receipt.json",
+    "failure": "源变化重建受影响输入，不伪造旧回执"
+  },
+  {
+    "group": "整单元与后续",
+    "id": "30",
+    "title": "连续正文与整单元审查",
+    "status": "现有实现",
+    "input": "完整采用单元",
+    "action": "汇总连读、事实复核、实际篇幅与章数；三章试写另标pilot",
+    "outputs": "02_连续正文.txt；unit_reader/facts.json；RESULT.json",
+    "failure": "试写完成不是完整单元完成"
+  },
+  {
+    "group": "整单元与后续",
+    "id": "31",
+    "title": "机制迁移与质量范围",
+    "status": "现有实现",
+    "input": "完整单元、已用参照窗口",
+    "action": "TRANSFER_REVIEW核实际期待/回应/体验、来源重合与窗口范围",
+    "outputs": "unit_transfer.json；quality_feedback.json",
+    "failure": "窗口比较不能宣布全书竞品达标；外部真值未知"
+  },
+  {
+    "group": "整单元与后续",
+    "id": "32",
+    "title": "预算、失败与恢复交付",
+    "status": "现有实现",
+    "input": "全部调用及状态",
+    "action": "汇总input/output/events/receipt、失败/未知token/耗时、下一动作",
+    "outputs": "usage.json；efficiency.json；NEXT_ACTION.json",
+    "failure": "任务累计100调用/250万已报token是上限，不是成本目标"
+  },
+  {
+    "group": "整单元与后续",
+    "id": "33",
+    "title": "冻结候选与正式采用",
+    "status": "现有机制，需新书适配",
+    "input": "完整单元结果、明确本书授权",
+    "action": "候选清单/正文SHA/源绑定；授权后才正式采用与发布",
+    "outputs": "CANDIDATE_MANIFEST.json；AUTHOR_APPROVAL.json；APPROVED_MANIFEST.json；正文指针",
+    "failure": "本轮没有作者批准或发布新正文"
+  },
+  {
+    "group": "整单元与后续",
+    "id": "34",
+    "title": "全局回写与影响检查",
+    "status": "需补齐",
+    "input": "正式采用正文、旧版全局资产",
+    "action": "事务式更新事实/角色/力量/关系/资源/读者状态/伏笔/时间线；核下一单元接口",
+    "outputs": "新版全局资产清单；变更日志；SAVE_VERIFICATION.json",
+    "failure": "失败回滚本次提交；不得混入候选计划"
+  },
+  {
+    "group": "整单元与后续",
+    "id": "35",
+    "title": "下一单元与卷复盘",
+    "status": "部分现有，需新书适配",
+    "input": "更新全局资产及实际前章",
+    "action": "继续15；卷末核长线承诺、人物变化、爽点重复、故事新鲜度与下一卷",
+    "outputs": "卷复盘.md；更新分卷路线/单元注册表",
+    "failure": "只改未发生计划；不为计划改已发生事实"
+  },
+  {
+    "group": "整单元与后续",
+    "id": "36",
+    "title": "真实读者验证",
+    "status": "需补齐",
+    "input": "同类完整新稿与明确样本",
+    "action": "盲读记录最想继续看的问题、弃读点、记住的回报；发布后结合真实追读反馈",
+    "outputs": "读者反馈.json；版本对照.md",
+    "failure": "没有真实数据不报顶流概率；修题材承诺/故事而非只修文句"
+  }
+]

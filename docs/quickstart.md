@@ -35,3 +35,14 @@
 每次保存角色、实际输入、输出版本、模型/配置、耗时、已知用量、裁决与证据。框架未提供用量时写未知。每次修稿保留父本，按任务累计预算，停止后记录具体下一动作。
 
 `templates/` 是最小数据起点，不是强制每章填满的表格。参照窗口、完整正文和运行日志留在自己的工作目录，别提交到本仓库。
+
+## 离线原子上下文示例
+
+```bash
+python3 tools/atomic_context.py --root . --manifest examples/context-manifest.json --purpose writer --max-chars 200 --output context-pack.json
+python3 -m unittest discover -s tools -p 'test_context_tools.py'
+```
+
+该示例只验证完整记录、预算、权限和SHA；不代表运行了300万字长篇。预算统计记录内容字符，不含JSON封装或模型token。输出文件必须不存在。
+
+原文读取器用`--source`、`--encoding`、`--sha256`、`--start`、`--end`定位合法自有来源；返回next_line用于补读，工具不声称已经语义理解。

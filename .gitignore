@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.DS_Store
+.env
+.env.*
+!.env.example
+task-prompt.txt
+workspace/
+runs/
+private/
+*.zip
+*.tar.gz

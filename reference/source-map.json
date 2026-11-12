@@ -1,0 +1,162 @@
+[
+  {
+    "source_file": "autonomous_production.py",
+    "source_sha256": "09e3d75416c4363bef499d8d3d91c9cf92b3b7d9c30905eec101dd88a1f18b2f",
+    "public_file": "reference/autonomous_production.py",
+    "public_sha256": "09e3d75416c4363bef499d8d3d91c9cf92b3b7d9c30905eec101dd88a1f18b2f",
+    "treatment": "unchanged"
+  },
+  {
+    "source_file": "autonomous_quality.py",
+    "source_sha256": "c814d94be724e825cdb3af1dc862a9373d746b73decd1173e67f521560f234ac",
+    "public_file": "reference/autonomous_quality.py",
+    "public_sha256": "c814d94be724e825cdb3af1dc862a9373d746b73decd1173e67f521560f234ac",
+    "treatment": "unchanged"
+  },
+  {
+    "source_file": "natural_expression.py",
+    "source_sha256": "f84589f5e0a55fa7eb9200c35f71611871cc061e6ce2a7c1dcb1a10a4dd77bdb",
+    "public_file": "reference/natural_expression.py",
+    "public_sha256": "f84589f5e0a55fa7eb9200c35f71611871cc061e6ce2a7c1dcb1a10a4dd77bdb",
+    "treatment": "unchanged"
+  },
+  {
+    "source_file": "production_efficiency.py",
+    "source_sha256": "5a49ae6f517c20530ed1e96c647a50f29f227ffd599dcf29b99d0dcc1287850f",
+    "public_file": "reference/production_efficiency.py",
+    "public_sha256": "5a49ae6f517c20530ed1e96c647a50f29f227ffd599dcf29b99d0dcc1287850f",
+    "treatment": "unchanged"
+  },
+  {
+    "source_file": "reader_known_state.py",
+    "source_sha256": "7a2e0ce132db1b551667305126b84e26b19213ecb77a0a4f170237fcc0844d11",
+    "public_file": "reference/reader_known_state.py",
+    "public_sha256": "7a2e0ce132db1b551667305126b84e26b19213ecb77a0a4f170237fcc0844d11",
+    "treatment": "unchanged"
+  },
+  {
+    "source_file": "dialogue_retrieval_production.py",
+    "source_sha256": "ae45a36bcb8f08ff07725bb183bc6f7e1408321653671a17469920ec6ad27da1",
+    "public_file": "reference/dialogue_retrieval_production.py",
+    "public_sha256": "ae45a36bcb8f08ff07725bb183bc6f7e1408321653671a17469920ec6ad27da1",
+    "treatment": "unchanged"
+  },
+  {
+    "source_file": "dialogue_fewshot_gate.py",
+    "source_sha256": "05e585e5f25eb9a589916985f44abaef0cece0f010306237928c2eb9fa55f77e",
+    "public_file": "reference/dialogue_fewshot_gate.py",
+    "public_sha256": "05e585e5f25eb9a589916985f44abaef0cece0f010306237928c2eb9fa55f77e",
+    "treatment": "unchanged"
+  },
+  {
+    "source_file": "fewshot_reference_guarantee.py",
+    "source_sha256": "638c2a4f7676e652849d4bfafa250cb4894e69ac72a946484275b58656a01817",
+    "public_file": "reference/fewshot_reference_guarantee.py",
+    "public_sha256": "638c2a4f7676e652849d4bfafa250cb4894e69ac72a946484275b58656a01817",
+    "treatment": "unchanged"
+  },
+  {
+    "source_file": "unit_story_selection.py",
+    "source_sha256": "224fef61e70b6de17dc592ac84ac3da134dce735fc13929f82de5ab5332dadd6",
+    "public_file": "reference/unit_story_selection.py",
+    "public_sha256": "224fef61e70b6de17dc592ac84ac3da134dce735fc13929f82de5ab5332dadd6",
+    "treatment": "unchanged"
+  },
+  {
+    "source_file": "appeal.py",
+    "source_sha256": "de352fc2128bf4a4bdbc52cb1eb77d0da98cb169eaab6110ddb19bc967f34a42",
+    "public_file": "reference/appeal.py",
+    "public_sha256": "de352fc2128bf4a4bdbc52cb1eb77d0da98cb169eaab6110ddb19bc967f34a42",
+    "treatment": "unchanged"
+  },
+  {
+    "source_file": "distill.py",
+    "source_sha256": "fd3f8350c0f34e3c7ac5a6b0b8d9817c9ad2920d9aff5d063a13bb36a420ff51",
+    "public_file": "reference/distill.py",
+    "public_sha256": "913f09f1d4b363f4d37134828b27c0d42c21d3cfbae1a2631b97af8da6d4a73c",
+    "treatment": "adapted"
+  },
+  {
+    "source_file": "storyforge/core.py",
+    "source_sha256": "502c71f36b76ce732e6333799fe5bff237fb5c5db1bc06e4e66f9ad0f9be22f0",
+    "public_file": "reference/context_compilers.py",
+    "treatment": "exact function excerpts; project services not exported"
+  },
+  {
+    "source_file": "01_正文基础规则.md",
+    "source_sha256": "3b5f7c64fdbf65a67bd079840761889e379a354885681bfdca647f1626eebd6f",
+    "public_file": "standards/01_正文基础规则.md",
+    "public_sha256": "3b5f7c64fdbf65a67bd079840761889e379a354885681bfdca647f1626eebd6f",
+    "treatment": "adapted"
+  },
+  {
+    "source_file": "02_写作详略专项.md",
+    "source_sha256": "e40e5173800d3f342e849067344df5af5cdcff75993650fae015a25679b9c9e3",
+    "public_file": "standards/02_写作详略专项.md",
+    "public_sha256": "e40e5173800d3f342e849067344df5af5cdcff75993650fae015a25679b9c9e3",
+    "treatment": "adapted"
+  },
+  {
+    "source_file": "03_AI味29类与检测方法.md",
+    "source_sha256": "cca6da6ca81fb9daccd5d7be53867ea75476e0af46de831b4bf01b626e8545a7",
+    "public_file": "standards/03_AI味29类与检测方法.md",
+    "public_sha256": "cca6da6ca81fb9daccd5d7be53867ea75476e0af46de831b4bf01b626e8545a7",
+    "treatment": "adapted"
+  },
+  {
+    "source_file": "04_竞品正文达标标准.md",
+    "source_sha256": "ebbe2d4b4447cf10e66264b1f57c97c1f6cee251d2675948b6f4ae975c500650",
+    "public_file": "standards/04_竞品正文达标标准.md",
+    "public_sha256": "6c6be17184c06b065e99a3a3fefe479142abbb5dc083c8f47e6af9845c4d41b2",
+    "treatment": "adapted"
+  },
+  {
+    "source_file": "05_报告与分批记录模板.md",
+    "source_sha256": "a36f1c872e0eff32f77f110d67d702ce2b7183adbf8201ee8beda92263ff417f",
+    "public_file": "standards/05_报告与分批记录模板.md",
+    "public_sha256": "a36f1c872e0eff32f77f110d67d702ce2b7183adbf8201ee8beda92263ff417f",
+    "treatment": "adapted"
+  },
+  {
+    "source_file": "09_自然表达双判与关系检查.md",
+    "source_sha256": "991343c0be2372e1202b3af2b9b26d2a4ed19b75985807b781fe1fd8f42371be",
+    "public_file": "standards/09_自然表达双判与关系检查.md",
+    "public_sha256": "991343c0be2372e1202b3af2b9b26d2a4ed19b75985807b781fe1fd8f42371be",
+    "treatment": "adapted"
+  },
+  {
+    "source_file": "10_对白动机与跨场解释审查.md",
+    "source_sha256": "ead6c7d3546c916ec731fbdf2e44ea6beab01f245e243aa69eff672e7ef5aab9",
+    "public_file": "standards/10_对白动机与跨场解释审查.md",
+    "public_sha256": "3a247b427df6c71cbd0a9790dc4908d0aff16896e6efb307d4dfadb10112d468",
+    "treatment": "adapted"
+  },
+  {
+    "source_file": "12_正文与故事单元竞品比较_v5.md",
+    "source_sha256": "8aa4e0bf6d9d71d57dd1a1caeed44cdd1137fb869ac171ef6437876b1d5a0186",
+    "public_file": "standards/单元设计与正文比较_v5.md",
+    "public_sha256": "8aa4e0bf6d9d71d57dd1a1caeed44cdd1137fb869ac171ef6437876b1d5a0186",
+    "treatment": "unchanged"
+  },
+  {
+    "source_file": "dialogue_fewshot_retrieval_config.json",
+    "source_sha256": "88bfc327440c53bda1485c2cf836f5e6529fd6b5a5e668767e0defca8d969e45",
+    "public_file": "reference/dialogue_fewshot_retrieval_config.json",
+    "public_sha256": "88bfc327440c53bda1485c2cf836f5e6529fd6b5a5e668767e0defca8d969e45",
+    "treatment": "unchanged historical contract; not activated config"
+  },
+  {
+    "source_file": "dialogue_target_profile_contract_v2.json",
+    "source_sha256": "620d333258abfb5deadce5ea15c2fcb462cdca7c5432572551eaeb95864c48c3",
+    "public_file": "reference/dialogue_target_profile_contract_v2.json",
+    "public_sha256": "620d333258abfb5deadce5ea15c2fcb462cdca7c5432572551eaeb95864c48c3",
+    "treatment": "unchanged historical contract; not activated config"
+  },
+  {
+    "source_file": "fewshot_reference_guarantee_v1.json",
+    "source_sha256": "3f3c6db39531be1d0f4000dbe3ac5f5452d490383e4433bcfdae6ff7f8e17e20",
+    "public_file": "reference/fewshot_reference_guarantee_v1.json",
+    "public_sha256": "3f3c6db39531be1d0f4000dbe3ac5f5452d490383e4433bcfdae6ff7f8e17e20",
+    "treatment": "unchanged historical contract; not activated config"
+  }
+]

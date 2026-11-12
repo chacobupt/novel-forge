@@ -1,0 +1,21 @@
+{
+  "version": "fewshot-reference-guarantee-v1",
+  "status": "ACTIVE",
+  "selection_order": [
+    "STRICT_MATCH",
+    "PARTIAL_REFERENCE",
+    "NEAREST_REFERENCE",
+    "CORPUS_REFERENCE"
+  ],
+  "minimum_effective_references_per_required_focus": 1,
+  "minimum_unique_references_per_writer_or_semantic_rewrite_call": 1,
+  "maximum_references_per_focus": 3,
+  "deduplication": "BY_RAW_EXCERPT_SHA_WITH_ALL_FOCUS_BINDINGS_PRESERVED",
+  "writer_instruction": "参考场景只用于学习指定的交流结构或自然表达；不得搬用人物、设定、事件、道具、事实或原句。参考不等于当前场景事实。",
+  "dispatch_gate": "ACTUAL_TASK_MESSAGE_FULL_WINDOW_AND_SHA_REQUIRED",
+  "request_id_when_unavailable": "UNAVAILABLE",
+  "rollback": {
+    "writer_config": "00_系统规则/rollback/fewshot_reference_guarantee_v1/writer_packet_production_config.pre_v1.json",
+    "retrieval_config": "00_系统规则/rollback/fewshot_reference_guarantee_v1/dialogue_fewshot_retrieval_config.pre_v1.json"
+  }
+}

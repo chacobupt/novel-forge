@@ -1,0 +1,37 @@
+{
+  "version": "dialogue-fewshot-retrieval-production-v1-frg1",
+  "retrieval_mode": "abc_focused_audit_v1",
+  "abc": {
+    "hybrid_info_weight": 0.65,
+    "hybrid_raw_weight": 0.35,
+    "tier_k": {
+      "A": 143,
+      "B": 190,
+      "C": 47
+    }
+  },
+  "multi_positive_enabled": true,
+  "max_positive_examples": 3,
+  "focused_audit": {
+    "model": "gpt-6-luna",
+    "max_unique_windows_per_focus": 40,
+    "round_sizes": [
+      8,
+      8,
+      8,
+      16
+    ]
+  },
+  "fallback_mode": "legacy_v5",
+  "reference_guarantee": {
+    "policy": "00_系统规则/fewshot_reference_guarantee_v1.json",
+    "selection_order": [
+      "STRICT_MATCH",
+      "PARTIAL_REFERENCE",
+      "NEAREST_REFERENCE",
+      "CORPUS_REFERENCE"
+    ],
+    "minimum_per_required_focus": 1,
+    "focus_preserving_deduplication": true
+  }
+}

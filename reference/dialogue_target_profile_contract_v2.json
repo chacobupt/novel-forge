@@ -1,0 +1,150 @@
+{
+  "version": "dialogue-target-profile-contract-v2",
+  "status": "CURRENT_SINGLE_ENTRY",
+  "field_count": 11,
+  "gold_isolation": {
+    "forbidden_inputs": ["qrel", "gold_example_ids", "retrieval_results", "candidate_recall", "tier_ranks", "focused_audit", "post_draft_prose"],
+    "rule": "字段值只能由冻结的pre-draft目标交流和同场景事实边界决定。"
+  },
+  "enums": {
+    "scene_function": ["F01｜普通互动", "F02｜日常照料", "F03｜熟人调侃", "F04｜关系冲突与修复", "F05｜交易谈判", "F06｜专业协作", "F07｜汇报、商议与决策", "F08｜危机命令", "F09｜权力试探", "F10｜秘密试探与回避", "F11｜公开群体", "F12｜敌对交锋、审讯与劝降"],
+    "speaker_objective": ["ask", "inform", "care", "command", "refuse", "bargain", "probe", "evade", "correct", "mobilize", "report", "reconcile", "seek_help", "commit"],
+    "listener_resistance": ["none", "disbelieves", "pretends_not_to_know", "fear_blocks", "bargains", "refuses", "knows_but_wont_commit", "misunderstands", "conflicting_goal", "unclear"],
+    "power_position": ["speaker_higher", "listener_higher", "equal", "contested", "reversing", "unclear"],
+    "pressure": ["low", "medium", "high"],
+    "publicity": ["private", "small_group", "public"],
+    "emotion_trajectory": ["stable", "escalates", "eases", "reverses", "hidden_then_leaks", "shifts_target", "unclear"],
+    "dialogue_register": ["everyday", "professional", "formal", "command", "intimate", "ritual"],
+    "speaking_strategy": ["direct_answer", "counter_question", "evade", "redirect", "interrupt", "concede_then_condition", "object_instead_of_explain", "polite_pressure", "deliberate_rudeness", "joke_cover", "silence_pressure", "partial_admission", "force_commitment"],
+    "companion_patterns": ["dialogue_action_alternation", "body_reaction", "prop_pressure", "observer_reaction", "pov_thought_pivot", "environment_pause", "dry_dialogue"]
+  },
+  "field_contracts": {
+    "scene_function": {
+      "priority": "CRITICAL",
+      "decision": "删除这次交流后，剧情失去哪一种不可替代的交流作用？",
+      "forbidden_shortcuts": ["publicity_is_public_therefore_F11", "danger_exists_therefore_F08", "someone_reports_therefore_F07"],
+      "audit_metadata": ["scene_function_evidence", "scene_function_rejected_alternatives"]
+    },
+    "speaker_objective": {
+      "priority": "CRITICAL",
+      "decision": "交流结束后，焦点说话者希望对方做、接受、知道或承诺什么？",
+      "single_primary": true,
+      "representation_loss_if_equal_objectives": true,
+      "audit_metadata": ["speaker_objective_evidence"]
+    },
+    "listener_resistance": {
+      "priority": "CRITICAL",
+      "decision": "听者自身什么交流阻力妨碍接受、执行或承诺？",
+      "external_danger_is_not_resistance": true,
+      "cooperation_value": "none",
+      "multi_listener_split": true,
+      "fear_blocks_requires": "听者恐惧实际阻止行动的证据声明",
+      "audit_metadata": ["listener_resistance_evidence", "listener_fear_blocks_action"]
+    },
+    "power_position": {
+      "priority": "IMPORTANT",
+      "decision_order": ["observable_control_transfer=>reversing", "active_control_dispute_without_transfer=>contested", "otherwise=>stable_higher_or_equal"],
+      "static_identity_forbidden": true,
+      "audit_metadata": ["power_before", "power_after", "power_transfer_evidence"]
+    },
+    "pressure": {
+      "priority": "SUPPORTING",
+      "decision": "交流执行时的行动窗口，而非故事总体危险。",
+      "high": ["seconds_or_minutes_decision", "ongoing_bodily_risk", "closing_resource_or_action_window", "immediate_severe_consequence"],
+      "medium": ["real_consequence", "limited_discussion_possible"],
+      "low": ["no_immediate_action_window"],
+      "audit_metadata": ["pressure_evidence"]
+    },
+    "publicity": {
+      "priority": "SUPPORTING",
+      "decision": "按有效参与者与能影响交流的旁观者范围判断，不按地点。",
+      "audit_metadata": ["publicity_evidence", "effective_participant_scope"]
+    },
+    "emotion_trajectory": {
+      "priority": "IMPORTANT",
+      "decision": "比较交流开始、核心转折与结束状态。",
+      "rules": {
+        "stable": "前后没有显著方向变化",
+        "escalates": "结束冲突明显高于开始",
+        "eases": "结束冲突真实下降",
+        "reverses": "情绪或立场方向明显反转",
+        "hidden_then_leaks": "原先压住的情绪变得可见",
+        "shifts_target": "情绪对象发生转移",
+        "unclear": "source不足以判断"
+      },
+      "middle_escalation_does_not_override_eased_end": true,
+      "audit_metadata": ["emotion_start", "emotion_turn", "emotion_end"]
+    },
+    "dialogue_register": {
+      "priority": "IMPORTANT",
+      "decision": "人物在本次交流实际采用的表达姿态，不按职业或身份自动判断。",
+      "audit_metadata": ["dialogue_register_evidence"]
+    },
+    "speaking_strategy": {
+      "priority": "IMPORTANT",
+      "primary_count": 1,
+      "secondary_max": 2,
+      "primary_test": "拿掉该手段会明显改变交流推进方式。",
+      "secondary_tests": ["direct_source_evidence", "not_synonym_of_primary", "adds_new_mechanism"],
+      "serialization": "primary_first_then_secondary_in_enum_order",
+      "scoring_semantics": "set_jaccard",
+      "audit_metadata": ["primary_strategy", "primary_strategy_evidence", "secondary_strategies"]
+    },
+    "companion_patterns": {
+      "priority": "SUPPORTING",
+      "primary_count": 1,
+      "secondary_max": 2,
+      "admission_tests": {
+        "A": "替代本来需要说出口的信息",
+        "B": "直接改变下一句台词含义",
+        "C": "改变对方是否相信、服从或继续交流",
+        "D": "产生打断、逼近、后退或交付物件等交流机制变化"
+      },
+      "usually_excluded": ["ordinary_movement", "mere_look", "decorative_pose", "combat_action_without_dialogue_causality"],
+      "serialization": "primary_first_then_secondary_in_enum_order",
+      "audit_metadata": ["primary_companion_pattern", "primary_companion_evidence", "primary_companion_qualification", "secondary_companion_patterns"]
+    },
+    "story_domain": {
+      "priority": "SUPPORTING",
+      "decision": "交流不可删除的题材/场景领域，不反向覆盖交流机制。",
+      "registry_path": "00_系统规则/dialogue_story_domain_v1.json",
+      "closed_set": true,
+      "raw_metadata": "story_domain_raw",
+      "scoring_field": "story_domain"
+    }
+  },
+  "retrieval_focus": {
+    "parent_id_preserved": true,
+    "max_per_parent": 3,
+    "split_triggers": ["multiple_equal_objectives", "different_listener_resistances", "primary_function_changes", "independent_power_phases", "structure_surface_need_cannot_share_profile"],
+    "focus_requirements": ["single_scene_function", "single_speaker_objective", "single_listener_resistance", "independent_transferable_capability", "deletion_loses_distinct_capability"],
+    "forbidden_splits": ["one_per_speaker", "one_per_sentence", "one_per_paragraph"]
+  },
+  "freeze_gate": {
+    "critical": ["scene_function", "speaker_objective", "listener_resistance"],
+    "important": ["speaking_strategy", "power_position", "emotion_trajectory", "dialogue_register"],
+    "supporting": ["pressure", "publicity", "companion_patterns", "story_domain"],
+    "critical_highly_unstable": "BLOCK",
+    "important_highly_unstable": "REQUIRE_SEMANTIC_REPAIR",
+    "supporting_unstable": "ALLOW_ONLY_WITH_VALIDATOR_PASS_AND_EXPLICIT_SEMANTIC_VALUE",
+    "focus_approval": ["source_provenance_complete", "validator_pass", "no_confirmed_semantic_error", "no_highly_unstable_critical", "canonical_story_domain"],
+    "parent_ready": "all_required_focuses_approved"
+  },
+  "stability_gate": {
+    "critical_scalar_at_least_4_of_5_rate": 0.95,
+    "critical_scalar_mean_agreement": 0.95,
+    "strategy_primary_modal_agreement": 0.90,
+    "strategy_mean_pairwise_jaccard": 0.85,
+    "tier_b_mean_agreement": 0.90,
+    "story_domain_exact_5_of_5": 1.0,
+    "companion_metrics": ["primary_modal_agreement", "mean_pairwise_jaccard"]
+  },
+  "versioning": {
+    "same_source_reuses_canonical": true,
+    "regenerate_flag": "--regenerate",
+    "regeneration_requires_new_version": true,
+    "overwrite_forbidden": true,
+    "diff_required": true,
+    "unknown_runtime_value": "UNKNOWN_NOT_EXPOSED"
+  }
+}

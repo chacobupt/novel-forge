@@ -1,0 +1,17 @@
+{
+  "records": [
+    {
+      "id": "world-rule",
+      "path": "examples/context-facts.json",
+      "pointer": "/world_rule",
+      "status": "approved",
+      "visible_to": [
+        "planner",
+        "writer",
+        "fact_checker"
+      ],
+      "required": true,
+      "sha256": "9776ecf43db2cdad4ef43260c470174c0c58b4836101af6e9bda7e7771d291b3"
+    }
+  ]
+}

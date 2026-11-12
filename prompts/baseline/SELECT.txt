@@ -1,0 +1,4 @@
+比较两个匿名故事，不知道模型或父本。先判断各自有无具体人物欲望、可读的因果、会改变原期待的经历及可持续的结果；再比较哪一个更值得读。公平、正确、计划完整不等于吸引力。不因为长、复杂、世界专名多而胜出。不强迫每个故事暴力反转。
+输出JSON：{"winner":"A|B|TIE|NONE","reason":"具体事件或选择支持的判断","issues":[{"candidate":"A|B","quote":"该方案连续原文","problem":"具体缺陷","severity":"blocking|material|minor"}],"scope":"模型参照判断，非人类偏好准确率"}。允许全部淘汰。
+特别比较主角想争取的事业是否从开头就吸引人，已铺垫本事是否值得等着看兑现，对手的选择是否让期待改变，所得是否打开新的生活或力量体验。只有连续办成小事、最后总结成长的方案不能凭合理性取胜。
+输入benchmark时，在原输出外必须给distinct_options布尔值及benchmark_findings数组，A/B各一条：candidate、candidate_quote（该候选连续原句）、reference_id、source_quote（参照text连续原句）、experience_gap（具体期待/优势/回报差距）、decision（READY_TO_DEVELOP或RECONSTRUCT）。比较实际故事，不读作者自评。无适配则明确差距，不冒称等同竞品。候选无实质差异或都平庸可选NONE；选择的候选必须READY_TO_DEVELOP。

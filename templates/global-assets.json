@@ -1,0 +1,19 @@
+{
+  "book_id": "your-book",
+  "version": 1,
+  "status": "CANDIDATE",
+  "assets": {
+    "compass": null,
+    "whole_story": null,
+    "volume_route": null,
+    "world": null,
+    "powers": null,
+    "characters": null,
+    "relationships": null,
+    "timeline": null,
+    "canon": null,
+    "reader_state": null,
+    "promises": null
+  },
+  "sources": []
+}

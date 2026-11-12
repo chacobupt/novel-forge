@@ -1,0 +1,14 @@
+{
+  "book_id": "your-book",
+  "title": null,
+  "audience": null,
+  "genre": null,
+  "reader_desire": null,
+  "reference_sources": [],
+  "status": "CANDIDATE",
+  "budget": {
+    "max_calls": 30,
+    "max_revision_rounds": 1
+  },
+  "formal_publication_authorized": false
+}
